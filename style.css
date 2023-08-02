@@ -1,0 +1,609 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#burger{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#burger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - 3px);
+}
+
+#burger span::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+#burger span::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+div.burger_container div.active span::before{
+    transform: rotate(45deg) !important;
+    transition: transform 0.3s ease;
+}
+
+div.burger_container div.active span::after{
+    transform: rotate(-45deg)!important;
+    transition: transform 0.3s ease;
+}
+div.burger_container div.active span{
+    background-color: transparent !important;
+}
+
+
+div.container_firstpart{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/1182477416/fr/photo/s%C3%A9lection-daliments-antioxydants.jpg?s=612x612&w=0&k=20&c=m2N4bm9Q42NlzEsmXYyIYnkoIgZLPsg3tTyhJPoNnng=');
+    /* height: 580px; */
+    height: 60vh; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: line;
+}
+
+header{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+header h1{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+header .t1 span{
+    color: rgb(207, 166, 89);
+}
+
+
+nav{
+    width: 70%;
+    justify-content: center;
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+}
+
+nav ul li:hover a{
+    color: rgb(207, 166, 89);
+    transition: color 0.3s ease-in-out;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul.active{
+    display: flex;
+    background-color:  #111111;
+    filter :contrast(3px);
+    font-weight: 600;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+header div.DeliFood div{
+    padding-right: 10px;
+}
+header div.DeliFood{
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+header div.DeliFood img{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    object-fit: cover;
+}
+header div.input{
+    width: 15%;
+}
+
+div.input{
+    display: flex;
+    justify-content: end;
+}
+header input{
+    background-color: rgb(207, 166, 89);
+    border: 1px solid #585757;
+    border-radius: 4px;
+    padding: 8px 0px 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+header ::placeholder{
+    color: #fff;
+}
+header hr{
+    width: 50px;
+    height: 3px;
+    background-color: rgb(207, 166, 89);
+    border: rgb(207, 166, 89);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(60vh - 96px);
+}
+
+.title h1{
+    font-size: 40px;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.title p{
+    font-size: 20px;
+    color: #ededed;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.title div.btn_animation a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: rgb(207, 166, 89);
+    /* background-color: transparent;
+    border: 1px solid #fff; */
+    padding: 7px 15px 7px 15px;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+div.btn_animation{
+    animation: grossissement 3s infinite;
+
+}
+@keyframes grossissement {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+.item2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+
+.container_items{
+    padding-top: 50px;
+}
+.img img{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    min-width: 180px;
+}
+
+.img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.img2 img{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    min-width: 180px;
+}
+.txt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.txt2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt .h2 h2{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+.txt2 .h2 h2{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+
+
+.hr hr{
+    width: 100px;
+    height: 3px;                      
+    background-color: rgb(207, 166, 89);
+    border: rgb(207, 166, 89);
+}
+.hr{
+    padding: 10px 0px 10px 0px;
+}
+.txt div.p p{
+    color: #585757;
+}
+
+.txt div.p{
+    text-align: center;
+    padding: 10px 0px 30px 0px;
+}
+.txt2 div.p p{
+    color: #585757;
+}
+
+.txt2 div.p{
+    text-align: center;
+    padding: 10px 0px 30px 0px;
+}
+div.Order a{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(207, 166, 89);
+    padding: 10px 20px 10px 20px;
+    font-weight: 600;
+}
+
+
+.subtitle span{
+    font-size: 50px;
+    font-size: calc(max(3.5vw, 35px));
+}
+.subtitle{
+    margin: 30px 0px 30px 20px;
+    display: flex;
+    align-items: center;
+}
+.subtitle img{
+    width: 5vw;
+    padding-left: 10px;
+    max-width: 66px;
+    min-width: 45px ;
+    transform: rotate(90deg);
+}
+.subtitle hr{
+    width: 100px;
+    height: 3.5px;                      
+    background-color: rgb(207, 166, 89);
+    border: rgb(207, 166, 89);
+}
+
+.abonnement{
+    background-color:  #111111;
+    color: #fff;
+    text-align: center;
+}
+.abonnement p{
+    padding: 5px 0px 5px 0px;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
+/* Style pour le footer */
+footer {
+    background-color: #111111;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap;
+    flex-basis: 100%; */
+  }
+  
+  /* Style pour les liens du footer */
+footer p {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+footer p:hover{
+    color: rgb(207, 166, 89);
+    transition: color 0.3s ease;
+}
+footer div{
+    display: flex;
+}
+footer img{
+    filter:invert(1);
+}
+
+footer div *{
+    padding: 10px;
+}
+  /* Style pour les images des réseaux sociaux */
+footer img {
+    margin-right: 10px;
+}
+  
+
+section.partenaire div.partenaire1 p{
+    font-size: 22px;
+    
+}
+
+
+@media  screen and (max-width:1030px) {
+    .txt .h2 h2{
+        font-size: 50px;
+        font-family: 'Dancing Script', cursive;
+    }
+    .txt2 .h2 h2{
+        font-size: 50px;
+        font-family: 'Dancing Script', cursive;
+    }
+    .subtitle span{
+        /* font-size: 35px; */
+        font-size: calc(max(4vw, 35px));
+        /* 53px max */
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    }
+}
+@media  screen and (max-width:964px) {
+    div.item{
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    div.item2{
+        flex-direction: column-reverse;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.item div.txt{
+        padding-top: 20px;
+    }
+    div.item2 div.txt2{
+        padding-top: 20px;
+    }
+
+    .img2{
+        padding-top: 50px;
+    } 
+     .item img{
+        width: 420px;
+    }
+    .item2 img{
+        width: 420px;
+    }
+}
+@media  screen and (max-width:555px) {
+    div.txt div.h2 h2{
+        font-size: 40px;
+        font-family: 'Dancing Script', cursive;
+    }
+    div.txt2 div.h2 h2{
+        font-size: 40px;
+    }
+    div.title a{
+        font-size: 16px;
+        padding: 7px 15px 7px 15px;
+    }
+}
+
+@media  screen and (max-width:600px) {
+    div.title h1{
+        font-size: 37px;
+    }
+    div.input{
+        display: none;
+    }
+    .burger_container {
+        display: flex;
+        justify-content: end !important;
+        align-items: center;
+        width: 50% !important;
+    }
+    header div.DeliFood {
+        width: 50%;
+    }
+    div.title{
+        transform: translateY(-30px);
+    }
+}
+
+
+
+@media  screen and (min-width:1170px) {
+    div.txt{
+        justify-content: flex-start;
+    }
+}
+
+@media  screen and (max-width:286px) {
+    div.Order a{
+        font-size: 15px;
+    }
+    .title p{
+        font-size: 18px;
+    }
+    div.title a{
+        font-size: 14px;
+    }
+}
+
+@media  screen and (min-width:1300px) {
+    div.subtitle span{
+        font-size:44px;
+    }
+}
+
+@media  screen and (max-width:523px) {
+    div.subtitle{
+        flex-direction: column;
+    }
+    .tall_title div h1{
+        padding-top: 110px;
+    }
+}
+
+@media screen and (min-width: 379px) and (max-width: 486px) {
+    div.subtitle img {
+        transform: translateY(-40px) rotate(90deg);
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+     ul{
+        position: absolute;
+        justify-content: center;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+        display: none;
+        align-items: center;
+        height: 50px;
+    }
+    ul li{
+        padding: 5px !important;
+    }
+    nav{
+        width: 0;
+    }
+    div#burger{
+        display: block;
+    }
+    header div.DeliFood {
+        width: 33%;
+    }
+    header div.input{
+        width: 33%;
+    }
+    .burger_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
+    }
+}
+
+
+@media screen and (max-width: 330px) {
+    ul.active{
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+        z-index: 90;
+    }
+    .tall_title div h1{
+        padding-top: 220px;
+    }
+
+    div.btn_animation a{
+        font-size: 6vw !important;
+    }
+    div.btn_animation{
+        padding-bottom: 100px;
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .DeliFood{
+        width:100% !important;
+        justify-content: center;
+    }
+    .burger_container{
+        justify-content: center !important;
+    }
+    .title{
+        transform: none !important;
+        overflow: hidden !important;
+    }
+    footer .contact, footer .copy{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen  and (max-height: 700px) and (max-width:330px){
+    .title{
+        padding-top: 80px !important;
+    }
+}
+
+@media screen  and (max-height: 700px) {
+    .title{
+        padding-top: 50px;
+    }
+    div.container_firstpart{
+        height: 80vh;
+    }
+}
